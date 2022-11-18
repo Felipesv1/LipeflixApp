@@ -2,11 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as S from "./Style";
 
-export default function Header({setSearch,search}) {
+export default function Header() {
 
   function toggleMenu() {
     const menu = document.querySelector(".menu");
     menu.classList.toggle("active");
+    const hamburguer = document.querySelector(".hamburguer");
+    hamburguer.classList.toggle("active");
   }
   
 
@@ -18,7 +20,7 @@ export default function Header({setSearch,search}) {
             </Link>
       </S.BoxTitle>
        
-      <S.Nav id="nav">
+      <S.Nav>
         <S.btn_mobile onClick={toggleMenu}>
           menu
           <div className='hamburguer'></div>

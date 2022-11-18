@@ -62,7 +62,6 @@ export default function Movies() {
                     <li key={i.id}>
                       {i.name} <S.Img src={i.imagem} alt="poster dos filmes" />
                     </li>
-
                     <p>{i.Sinopse}</p>
                   </S.Box_Cards_Movies>
                 );
@@ -70,7 +69,7 @@ export default function Movies() {
             : movies.map((i) => {
                 return (
                   <S.Box_Cards_Movies>
-                    <li>
+                    <li >
                       {i.name} <S.Img src={i.imagem} alt="poster dos filmes" />
                     </li>
                     <p>{i.Sinopse}</p>

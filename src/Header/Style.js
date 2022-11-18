@@ -79,7 +79,7 @@ export const Nav = styled.nav`
    
   }    
 
-  .active{
+ .menu.active{
     height:calc(100vh - 50px) ;
     visibility: visible;
     overflow-y:auto;
@@ -99,6 +99,17 @@ export const Nav = styled.nav`
     transition: 0.3s;
     position: relative;
 }    
+
+.hamburguer.active{
+  border-top: transparent;
+}
+.hamburguer.active::before{
+    transform: rotate(135deg);
+  }
+   .hamburguer.active::after{
+    transform: rotate(-135deg);
+    top: -7px;
+  }
 
   .menu a {
     display: block;

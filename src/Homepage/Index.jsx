@@ -18,8 +18,6 @@ export default function Homepage() {
     axios
       .get(ApiMovies)
       .then((res) => {
-        console.log(res.data.results);
-        console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
         setMovies(
           res.data.results.map((item) => {
@@ -37,8 +35,6 @@ export default function Homepage() {
     axios
       .get(ApiSeries)
       .then((res) => {
-        console.log(res.data.results);
-        console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
         setSeries(
           res.data.results.map((item) => {
@@ -71,8 +67,8 @@ export default function Homepage() {
         >
           {movies.map((i) => {
             return (
-              <S.Box_Cards_Movies as={motion.div}>
-                <li>
+              <S.Box_Cards_Movies as={motion.div} key={i.id} >
+                <li >
                   <S.Img src={i.imagem} alt="poster dos filmes" />
                 </li>
               </S.Box_Cards_Movies>
@@ -83,7 +79,7 @@ export default function Homepage() {
       </S.ListMovies>
       <S.TitleSeries>Series Mais Populares:</S.TitleSeries>
 
-      <S.ListSeries>
+      <S.ListSeries >
         <S.Inner
           as={motion.div}
           whileTap={{ cursor: "grabbing" }}
@@ -95,10 +91,9 @@ export default function Homepage() {
         >
           {series.map((i) => {
             return (
-              <S.Box_Cards_Series as={motion.div}>
+              <S.Box_Cards_Series as={motion.div} >
                 <li>
-                 
-                  <S.Img src={i.imagem} alt="poster das series" />
+                  <S.Img src={i.imagem} alt="poster das series"  />
                 </li>
               </S.Box_Cards_Series>
             );
