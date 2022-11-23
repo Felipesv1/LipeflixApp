@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { ApiMovies } from "../Api/Apis";
 import Header from "../Header";
+import { MagnifyingGlass } from "phosphor-react";
 
 import * as S from "./Style";
 // https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
@@ -23,7 +24,6 @@ export default function Movies() {
     axios
       .get(ApiMovies)
       .then((res) => {
-        console.log(res.data.results);
         setMovies(
           res.data.results.map((item) => {
             return {
@@ -51,6 +51,7 @@ export default function Movies() {
             setSearch(e.target.value);
           }}
         />
+
       </S.Box_Search>
       <S.ContainerTwo>
         <h2>Filmes Mais Populares :</h2>

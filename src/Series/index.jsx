@@ -54,6 +54,8 @@ export default function App() {
         />
       </S.Box_Search>
       <S.ContainerTwo>
+      <h2>Series Mais Populares :</h2>
+
         <S.ListSeries>
           {search.length > 0
             ? seriesFiltered.map((i) => {

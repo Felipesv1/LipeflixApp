@@ -6,18 +6,20 @@ export const Container = styled.section`
   background: black;
 `;
 export const Box_Search = styled.div`
-  width: 100%;
-  height: 45px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  position: relative;
   display: flex;
   justify-content: center;
+  max-width: 35rem;
+  margin: auto;
+  margin-top: 50px;
 `;
 export const Input = styled.input`
-  width: 350px;
-  height: 45px;
+  width: 100%;
   font-size: 18px;
   letter-spacing: 2px;
+  border-radius: 5px;
+  padding: 1rem 1.6rem;
+  border: none;
   @media screen and (min-width: 300px) and (max-width: 800px) {
     width: 250px;
   }

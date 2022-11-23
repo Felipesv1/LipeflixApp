@@ -7,25 +7,33 @@ export const Container = styled.section`
 `;
 
 export const Box_Search = styled.div`
-  width: 100%;
-  height: 45px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: 35rem;
+  margin: auto;
+  margin-top: 50px;
+
 `;
 export const Input = styled.input`
-  width: 350px;
-  height: 45px;
+  width: 100%;
   font-size: 18px;
   letter-spacing: 2px;
+  border-radius: 5px;
+  padding: 1rem 1.6rem;
+  border: none;
   @media screen and (min-width: 300px) and (max-width: 800px) {
     width: 250px;
   }
 `;
 export const ContainerTwo = styled.div`
   width: 100%;
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    padding: 15px;
+  }
 `;
 
 export const ListSeries = styled.ul`
@@ -78,7 +86,6 @@ export const Img = styled.img`
   width: 300px;
   object-fit: cover;
   padding: 5px;
-  transition: 1s all;
   border-radius: 15px;
   border: 1px solid red;
 `;
