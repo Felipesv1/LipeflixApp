@@ -6,7 +6,8 @@ export const Container = styled.section`
   background: black;
 `;
 export const Box_Search = styled.div`
-  position: relative;
+  width: 100%;
+
   display: flex;
   justify-content: center;
   max-width: 35rem;
@@ -14,12 +15,18 @@ export const Box_Search = styled.div`
   margin-top: 50px;
 `;
 export const Input = styled.input`
+::placeholder{
+  color: white;
+}
   width: 100%;
   font-size: 18px;
   letter-spacing: 2px;
   border-radius: 5px;
   padding: 1rem 1.6rem;
   border: none;
+  background-color: #5c5c5c;
+  color: white;
+  
   @media screen and (min-width: 300px) and (max-width: 800px) {
     width: 250px;
   }

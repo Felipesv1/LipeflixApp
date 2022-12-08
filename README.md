@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
- <img src=".github/preview.png" alt="imagem do site">
+ <img src=".github/LipeflixVideo.mp4" alt="video do site">
 </p>
 
 ## 🚀 Tecnologias
