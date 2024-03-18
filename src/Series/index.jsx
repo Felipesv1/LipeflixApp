@@ -4,9 +4,6 @@ import * as S from "./Style";
 import { ApiSeries } from "../Api/Apis";
 import Header from "../Header";
 
-// https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
-// eff0ebc6f24060cba1c4ceb8fea3f898
-
 export default function App() {
   const [search, setSearch] = useState("");
   const [series, setSeries] = useState([]);
@@ -42,7 +39,7 @@ export default function App() {
 
   return (
     <S.Container>
-      <Header/>
+      <Header />
       <S.Box_Search>
         <S.Input
           value={search}
@@ -54,7 +51,7 @@ export default function App() {
         />
       </S.Box_Search>
       <S.ContainerTwo>
-      <h2>Series Mais Populares :</h2>
+        <h2>Series Mais Populares :</h2>
 
         <S.ListSeries>
           {search.length > 0

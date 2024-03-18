@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import * as S from "./Style";
 import { motion } from "framer-motion";
 import { ApiMovies, ApiSeries } from "../Api/Apis";
@@ -12,13 +12,11 @@ export default function Homepage() {
   const [series, setSeries] = useState([]);
   const [erro, setErro] = useState("");
   const carousel = useRef();
-  const [width, setWidth] = useState(0);
 
   useEffect(() => {
     axios
       .get(ApiMovies)
       .then((res) => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
         setMovies(
           res.data.results.map((item) => {
             return {
@@ -35,7 +33,6 @@ export default function Homepage() {
     axios
       .get(ApiSeries)
       .then((res) => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
         setSeries(
           res.data.results.map((item) => {
             return {
@@ -53,22 +50,22 @@ export default function Homepage() {
 
   return (
     <S.Container as={motion.section}>
-      <Header/>
+      <Header />
       <S.TitleFilmes>Filmes Mais Populares:</S.TitleFilmes>
       <S.ListMovies ref={carousel}>
         <S.Inner
           as={motion.div}
           whileTap={{ cursor: "grabbing" }}
           drag="x"
-          dragConstraints={{ right: 0, left: -width }}
+          dragConstraints={carousel}
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
           {movies.map((i) => {
             return (
-              <S.Box_Cards_Movies as={motion.div} key={i.id} >
-                <li >
+              <S.Box_Cards_Movies as={motion.div} key={i.id}>
+                <li>
                   <S.Img src={i.imagem} alt="poster dos filmes" />
                 </li>
               </S.Box_Cards_Movies>
@@ -79,21 +76,21 @@ export default function Homepage() {
       </S.ListMovies>
       <S.TitleSeries>Series Mais Populares:</S.TitleSeries>
 
-      <S.ListSeries >
+      <S.ListSeries>
         <S.Inner
           as={motion.div}
           whileTap={{ cursor: "grabbing" }}
           drag="x"
-          dragConstraints={{ right: 0, left: -width }}
+          dragConstraints={carousel}
           initial={{ x: 100 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
           {series.map((i) => {
             return (
-              <S.Box_Cards_Series as={motion.div} >
+              <S.Box_Cards_Series as={motion.div}>
                 <li>
-                  <S.Img src={i.imagem} alt="poster das series"  />
+                  <S.Img src={i.imagem} alt="poster das series" />
                 </li>
               </S.Box_Cards_Series>
             );

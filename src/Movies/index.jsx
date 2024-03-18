@@ -3,10 +3,7 @@ import React, { useEffect, useState } from "react";
 import { ApiMovies } from "../Api/Apis";
 import Header from "../Header";
 
-
 import * as S from "./Style";
-// https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>&language=en-US&page=1
-// eff0ebc6f24060cba1c4ceb8fea3f898
 
 export default function Movies() {
   const [search, setSearch] = useState("");
@@ -51,7 +48,6 @@ export default function Movies() {
             setSearch(e.target.value);
           }}
         />
-
       </S.Box_Search>
       <S.ContainerTwo>
         <h2>Filmes Mais Populares :</h2>
@@ -70,7 +66,7 @@ export default function Movies() {
             : movies.map((i) => {
                 return (
                   <S.Box_Cards_Movies>
-                    <li >
+                    <li>
                       {i.name} <S.Img src={i.imagem} alt="poster dos filmes" />
                     </li>
                     <p>{i.Sinopse}</p>
