@@ -27,18 +27,6 @@
   <li>User authentication and personalized recommendations (future implementation).</li>
 </ul>
 
-<!-- Demo -->
-<h3 align="center">🎥 Demo</h3>
-<p align="center">
-  View a live demo <a href="#">here</a>.
-</p>
-
-<!-- Screenshots -->
-<h3 align="center">📷 Screenshots</h3>
-<p align="center">
-  <img src="screenshot1.png" width="400px" alt="Screenshot 1">
-  <img src="screenshot2.png" width="400px" alt="Screenshot 2">
-</p>
 
 <!-- Installation -->
 <h3 align="center">🔧 Installation</h3>
