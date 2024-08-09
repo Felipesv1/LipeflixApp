@@ -8,7 +8,7 @@
 
 <!-- Project Description -->
 <p align="center">
-  LipeflixApp is a responsive web application built using ReactJS, Styled Components, and TailwindCSS, designed to showcase movies and TV shows.
+  LipeflixApp is a responsive web application built using ReactJS, Styled Components, designed to showcase movies and TV shows.
 </p>
 
 <!-- Technologies -->
